@@ -1,0 +1,14 @@
+{
+  "name": "draw-screen",
+  "version": "0.0.1",
+  "description": "Draw screen app for presentations",
+  "main": "index.js",
+  "author": "Allef Douglas <allefwalker73@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^18.2.2"
+  }
+}
