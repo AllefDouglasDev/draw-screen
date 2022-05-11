@@ -2,9 +2,10 @@ const canvas = document.querySelector("canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let drawing = false;
 let x = 0;
 let y = 0;
+let drawing = false;
+let clearCanvasTimeout = null;
 
 function onMouseDown(event) {
   drawing = true;
@@ -38,6 +39,11 @@ function onMouseMove(event) {
 
   x = event.offsetX;
   y = event.offsetY;
+
+  clearTimeout(clearCanvasTimeout);
+  clearCanvasTimeout = setTimeout(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }, 2000);
 }
 
 canvas.addEventListener("mouseup", onMouseUp);
