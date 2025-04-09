@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
     <title>Hello World!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body >
+  <body>
     <div class="menu">
-        <input id="should-clean" type="checkbox" />
-      <label>
-        Limpar automático?
-      </label>
-
-      <label for="color">
-        <input type="color" id="color" value="#0095DD">    
-        Select your favorite color:
-      </label>
-
-      <input type="range" min="1" max="100" value="10" id="line-width">
+      <button id="toggle-menu">🔽</button>
+      <div class="menu-content">
+        <div class="row">
+          <input id="should-clean" type="checkbox" />
+          <label for="should-clean">Autoclean (2s)</label>
+        </div>
+        <div class="row">
+          <input type="color" id="color" value="#0095DD" />
+          <input type="range" min="1" max="100" value="10" id="line-width" />
+        </div>
+      </div>
     </div>
 
     <canvas width="1100" height="900"></canvas>
