@@ -134,6 +134,8 @@ function onShouldCleanChange(event) {
 }
 
 function clearTimeoutAndCanvas() {
+  images.push(ctx.getImageData(0, 0, canvas.width, canvas.height))
+  imagesDeleted = []
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   clearTimeout(clearCanvasTimeout);
 }
